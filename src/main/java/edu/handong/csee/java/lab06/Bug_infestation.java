@@ -1,11 +1,28 @@
 package edu.handong.csee.java.lab06;   // package name
 
 import java.util.Scanner;   // import scanner
-public class Bug_infestation {   // class name
-	
+/**
+ * This class implements a calculator that computes roach-filled time and total numbers and volume of roaches
+ * @author 21700184
+**/
+public class Bug_infestation {
+	/**
+	 * GROWTH_RATE - weekly growth rate of the roach population (a constant 0.95)
+	 */
 	public static final double GROWTH_RATE = 0.95;   // constant value 'GROWTH_RATE'
+	/**
+	 * ONE_BUG_VOLUME - volume of an average roach (a constant 0.002)
+	 */
 	public static final double ONE_BUG_VOLUME = 0.002;   // constant value 'ONE_BUG_VOLUME'
-	
+    /**
+     * houseVolume - volume of the house
+     * startPopulation - initial number of roaches
+     * countWeeks - week counter
+     * population - current number of roaches
+     * totalBugVolume - total volume of all the roaches
+     * newBugs - number of roaches hated this week
+     * newBugVolume - volume of new roaches
+     */
 	public static void main(String[] args) {   // main method
 		double houseVolume;   // declare houseVolume
 		int startPopulation;   // declare houseVolume

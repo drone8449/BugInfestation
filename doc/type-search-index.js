@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"edu.handong.csee.java.lab06","l":"Bug_infestation"},{"p":"<Unnamed>","l":"Library"}]
