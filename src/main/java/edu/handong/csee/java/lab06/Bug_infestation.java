@@ -5,7 +5,7 @@ import java.util.Scanner;   // import scanner
  * This class implements a calculator that computes roach-filled time and total numbers and volume of roaches
  * @author 21700184
 **/
-public class Bug_infestation {
+public class Bug_infestation {   // make class 'Bug_infestation'
 	/**
 	 * GROWTH_RATE - weekly growth rate of the roach population (a constant 0.95)
 	 */
