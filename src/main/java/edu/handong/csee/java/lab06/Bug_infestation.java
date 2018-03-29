@@ -1,42 +1,42 @@
-package edu.handong.csee.java.lab06;
+package edu.handong.csee.java.lab06;   // package name
 
-import java.util.Scanner;
-public class Bug_infestation {
+import java.util.Scanner;   // import scanner
+public class Bug_infestation {   // class name
 	
-	public static final double GROWTH_RATE = 0.95;
-	public static final double ONE_BUG_VOLUME = 0.002;
+	public static final double GROWTH_RATE = 0.95;   // constant value 'GROWTH_RATE'
+	public static final double ONE_BUG_VOLUME = 0.002;   // constant value 'ONE_BUG_VOLUME'
 	
-	public static void main(String[] args) {
-		double houseVolume;
-		int startPopulation;
+	public static void main(String[] args) {   // main method
+		double houseVolume;   // declare houseVolume
+		int startPopulation;   // declare houseVolume
 			
-		Scanner keyboard = new Scanner(System.in);
+		Scanner keyboard = new Scanner(System.in);   // declare object 'keyboard' to use Scanner class
 			
-		System.out.print("Enter the total volume of your house in cubic feet: ");
-		houseVolume = keyboard.nextInt();
+		System.out.print("Enter the total volume of your house in cubic feet: ");   // print "Enter the total volume of your house in cubic feet: "
+		houseVolume = keyboard.nextInt();   // input value is houseVolume
 		
-		System.out.print("Enter the estimated number of roaches in your house: ");
-		startPopulation = keyboard.nextInt();
+		System.out.print("Enter the estimated number of roaches in your house: ");   // print "Enter the estimated number of roaches in your house: "
+		startPopulation = keyboard.nextInt();   // input value is startPopulation
 		
-		int population = startPopulation;
+		int population = startPopulation;    // put startPopulation value to population
 		
-		int totalBugVolume = (int)(population * GROWTH_RATE);
-		double newBugVolume;
-		int newBugs;
-		int countWeeks = 0;
+		int totalBugVolume = (int)(population * GROWTH_RATE);   // declare totalBugVolume to multiplication of population and GROWTH_RATE
+		double newBugVolume;    // declare newBugVolume
+		int newBugs;   // declare newBugs
+		int countWeeks = 0;    // declare countWeeks
 		
-	    while (totalBugVolume < houseVolume){
-    	    newBugs = (int)(population * GROWTH_RATE);
-    	    newBugVolume = newBugs * ONE_BUG_VOLUME;
-    	    population = population + newBugs;
-    	    totalBugVolume = (int)(totalBugVolume + newBugVolume);
-    	    countWeeks = countWeeks + 1;
+	    while (totalBugVolume < houseVolume){     // repeat while 'totalBugVolume < houseVolume'
+    	        newBugs = (int)(population * GROWTH_RATE);   // declare newBugs to multiplication of population and GROWTH_RATE
+    	        newBugVolume = newBugs * ONE_BUG_VOLUME;   // declare newBugVolume to multiplication of newBugs and ONE_BUG_VOLUME
+    	        population = population + newBugs;   // add newBugs to population
+    	        totalBugVolume = (int)(totalBugVolume + newBugVolume);   // declare totalBugVolume to sum of totalBugVolume and newBugVolume
+    	        countWeeks = countWeeks + 1;   // add 1 to countWeeks
         }
 		
-	    System.out.print("Starting with a roach population of " + startPopulation);
-	    System.out.print("and a house with a volume of " + houseVolume + " cubic feet, after " + countWeeks + " weeks,");
-	    System.out.print("the house will be filled with " + population + " roaches.");
-	    System.out.print("They will fill a volume of " + totalBugVolume + " cubic feet");
-	    System.out.print("Better call Debugging Experts Inc.");
+	    System.out.println("Starting with a roach population of " + startPopulation);   // print start roach population
+	    System.out.println("and a house with a volume of " + houseVolume + " cubic feet, after " + countWeeks + " weeks,");   // print volume of house and weeks 
+	    System.out.println("the house will be filled with " + population + " roaches.");   // print roaches number when house is filled with roaches
+	    System.out.println("They will fill a volume of " + totalBugVolume + " cubic feet");   // print volume of total roaches 
+	    System.out.println("Better call Debugging Experts Inc.");   // print message "Better call Debugging Experts Inc."
 	}
 }
